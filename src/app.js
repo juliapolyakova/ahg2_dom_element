@@ -7,10 +7,12 @@ img.src = './goblin.png';
 const startGame = Math.floor(Math.random() * cells.length);
 cells[startGame].appendChild(img);
 
-const randomImg = setInterval(() => {
+function randomImg() {
   const cell = Math.floor(Math.random() * cells.length);
 
   if (cell !== startGame) {
     cells[cell].appendChild(img);
   }
-}, 1000);
+}
+
+setInterval(randomImg, 1000);
