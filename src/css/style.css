@@ -1,0 +1,17 @@
+body {
+  box-sizing: border-box;
+}
+
+.board {
+  display: flex;
+  width: 800px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cell {
+  width: 190px;
+  height: 190px;
+  margin-bottom: 10px;
+  background: rgb(143, 233, 181);
+}
