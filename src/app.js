@@ -1,8 +1,8 @@
-import './goblin.png';
+import './img/goblin.png';
 
 const cells = [...document.querySelectorAll('.cell')];
 const img = document.createElement('img');
-img.src = './goblin.png';
+img.src = './images/goblin.png';
 
 const startGame = Math.floor(Math.random() * cells.length);
 cells[startGame].appendChild(img);

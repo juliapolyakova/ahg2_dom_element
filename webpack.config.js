@@ -24,12 +24,22 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.html$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'html-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg|ico)$/i,
+        use: [
+          {
+            loader: 'file-loader',
             options: {
-              limit: 8192,
+              esModule: false,
+              outputPath: 'images',
+              name: '[name].[ext]',
             },
           },
         ],
@@ -39,7 +49,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename: 'index.html',
+      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
